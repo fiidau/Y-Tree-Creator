@@ -42,7 +42,6 @@
             this.snpTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtSNPs = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbRemoveBackMutations = new System.Windows.Forms.CheckBox();
@@ -76,13 +75,14 @@
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.plotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.expandAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.collapseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.expandAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.collapseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtSNPs = new YTreeCreator.TextBoxExt();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -256,10 +256,10 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.txtSNPs, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.panel3, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtSNPs, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
@@ -271,18 +271,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(523, 516);
             this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // txtSNPs
-            // 
-            this.txtSNPs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSNPs.Location = new System.Drawing.Point(2, 18);
-            this.txtSNPs.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSNPs.Multiline = true;
-            this.txtSNPs.Name = "txtSNPs";
-            this.txtSNPs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSNPs.Size = new System.Drawing.Size(519, 223);
-            this.txtSNPs.TabIndex = 1;
-            this.txtSNPs.Text = resources.GetString("txtSNPs.Text");
             // 
             // label3
             // 
@@ -569,14 +557,14 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // buildToolStripMenuItem1
             // 
             this.buildToolStripMenuItem1.Name = "buildToolStripMenuItem1";
-            this.buildToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.buildToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
             this.buildToolStripMenuItem1.Text = "&Build";
             this.buildToolStripMenuItem1.Click += new System.EventHandler(this.buildToolStripMenuItem1_Click);
             // 
@@ -584,29 +572,50 @@
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.exportToolStripMenuItem.Text = "&Export";
             this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(133, 6);
             // 
             // plotToolStripMenuItem
             // 
             this.plotToolStripMenuItem.Enabled = false;
             this.plotToolStripMenuItem.Name = "plotToolStripMenuItem";
-            this.plotToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.plotToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.plotToolStripMenuItem.Text = "&Plot";
             this.plotToolStripMenuItem.Click += new System.EventHandler(this.plotToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(133, 6);
+            // 
+            // expandAllToolStripMenuItem
+            // 
+            this.expandAllToolStripMenuItem.Enabled = false;
+            this.expandAllToolStripMenuItem.Name = "expandAllToolStripMenuItem";
+            this.expandAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.expandAllToolStripMenuItem.Text = "Expand &All";
+            this.expandAllToolStripMenuItem.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
+            // 
+            // collapseAllToolStripMenuItem
+            // 
+            this.collapseAllToolStripMenuItem.Enabled = false;
+            this.collapseAllToolStripMenuItem.Name = "collapseAllToolStripMenuItem";
+            this.collapseAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.collapseAllToolStripMenuItem.Text = "&Collapse All";
+            this.collapseAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -636,26 +645,17 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // expandAllToolStripMenuItem
+            // txtSNPs
             // 
-            this.expandAllToolStripMenuItem.Enabled = false;
-            this.expandAllToolStripMenuItem.Name = "expandAllToolStripMenuItem";
-            this.expandAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.expandAllToolStripMenuItem.Text = "Expand &All";
-            this.expandAllToolStripMenuItem.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
-            // 
-            // collapseAllToolStripMenuItem
-            // 
-            this.collapseAllToolStripMenuItem.Enabled = false;
-            this.collapseAllToolStripMenuItem.Name = "collapseAllToolStripMenuItem";
-            this.collapseAllToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.collapseAllToolStripMenuItem.Text = "&Collapse All";
-            this.collapseAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
+            this.txtSNPs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSNPs.Location = new System.Drawing.Point(3, 19);
+            this.txtSNPs.MaxLength = 2000000000;
+            this.txtSNPs.Multiline = true;
+            this.txtSNPs.Name = "txtSNPs";
+            this.txtSNPs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSNPs.Size = new System.Drawing.Size(517, 221);
+            this.txtSNPs.TabIndex = 5;
+            this.txtSNPs.Text = resources.GetString("txtSNPs.Text");
             // 
             // MainFrm
             // 
@@ -716,7 +716,6 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSNPs;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblyhg;
         private System.Windows.Forms.Label label5;
@@ -759,6 +758,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem expandAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem collapseAllToolStripMenuItem;
+        private TextBoxExt txtSNPs;
     }
 }
 

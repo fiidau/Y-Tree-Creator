@@ -1,0 +1,8 @@
+C:\PERSONAL\GitHub\Y-Tree-Creator\bin\Release\Y-Tree-Creator.exe
+C:\PERSONAL\GitHub\Y-Tree-Creator\bin\Release\Y-Tree-Creator.pdb
+C:\PERSONAL\GitHub\Y-Tree-Creator\obj\x86\Release\YTreeCreator.IgnoreListFrm.resources
+C:\PERSONAL\GitHub\Y-Tree-Creator\obj\x86\Release\YTreeCreator.MainFrm.resources
+C:\PERSONAL\GitHub\Y-Tree-Creator\obj\x86\Release\YTreeCreator.Properties.Resources.resources
+C:\PERSONAL\GitHub\Y-Tree-Creator\obj\x86\Release\Y-Tree-Creator.csproj.GenerateResource.Cache
+C:\PERSONAL\GitHub\Y-Tree-Creator\obj\x86\Release\Y-Tree-Creator.exe
+C:\PERSONAL\GitHub\Y-Tree-Creator\obj\x86\Release\Y-Tree-Creator.pdb
